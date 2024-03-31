@@ -21,6 +21,7 @@ class CryptocurrencyTracker extends Component {
   getCryptocurrencies = async () => {
     const response = await fetch(apiUrl)
     const fetchedData = await response.json()
+    console.log(fetchData)
 
     this.setState({
       cryptocurrenciesData: fetchedData.map(eachCryptocurrency => ({
